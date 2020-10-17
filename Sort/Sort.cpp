@@ -17,20 +17,7 @@ int main()
 	}
 	pSpace = (char**)malloc(ary * sizeof(int)); // reserve area[]
 	p = str; // reset p to str[0]
-
-	while (*p != '\0') {	//find number word largest ary 
-		if (*p != ' ') { 
-
-			countAry++; 
-			if (countAry > maxAry) {
-				maxAry = countAry;
-			}
-		} 
-		else if (*p == ' ') {
-			countAry = 0;
-		}
-		p++;
-	}
+	maxAry= Max(maxAry, countAry, p);
 	printf("max character : %d\n", maxAry);
 	p = str;
 		for(i=0;i<ary;i++){
